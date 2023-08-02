@@ -1,4 +1,5 @@
 
+using System;
 using Nuke.Common;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
@@ -53,6 +54,7 @@ class Build : NukeBuild
         .DependsOn(Compile)
         .Executes(() =>
         {
+            Console.WriteLine($"Execute Pack - project path {ProjectPath}, artifacts directory {ArtifactsDirectory}");
             DotNetPack(s => s
                 .SetProject(ProjectPath)
                 .SetConfiguration(Configuration)
