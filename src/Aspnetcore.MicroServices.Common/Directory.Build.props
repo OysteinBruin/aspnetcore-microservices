@@ -1,0 +1,10 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Øystein Bruin</Authors>
+        <RepositoryUrl>https://github.com/OysteinBruin/aspnetcore-microservices</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/OysteinBruin/aspnetcore-microservices</PackageProjectUrl>
+        <PackageLicense>https://github.com/OysteinBruin/aspnetcore-microservices/blob/main/LICENSE</PackageLicense>
+        <VersionPrefix>0.1.1</VersionPrefix>
+        <VersionSuffix>alpha</VersionSuffix>
+    </PropertyGroup>
+</Project>
