@@ -5,7 +5,7 @@ environment:
     secure: ypmHjr7gmKfOUvyHhvStS7lQBTxNX8p6ByvlTFxfA59TOT0ytB31Eukm/1rKpCJK
   NugetApiKey:
     secure: todo
-    
+  
 skip_branch_with_pr: true
 pull_requests:
   do_not_increment_build_number: true
