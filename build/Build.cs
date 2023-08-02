@@ -2,6 +2,7 @@
  */
 
 using System;
+using System.Linq;
 using Nuke.Common;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
@@ -166,23 +167,23 @@ class Build : NukeBuild
 
         });
     
-    /*Target Push => _ => _
+    Target Push => _ => _
         .DependsOn(Pack)
         .Requires(() => NugetApiUrl)
         .Requires(() => NugetApiKey)
         .Requires(() => Configuration.Equals(Configuration.Release))
         .Executes(() =>
         {
-            GlobFiles(NugetDirectory, "*.nupkg")
-                .NotEmpty()
-                .Where(x => !x.EndsWith("symbols.nupkg"))
+            NugetDirectory.GlobFiles("*.nupkg")
+                .Where(x => !x.HasExtension("symbols.nupkg"))
                 .ForEach(x =>
                 {
+                    Console.WriteLine($"Execute Push - target path {x}, source {NugetApiUrl}");
                     DotNetNuGetPush(s => s
                         .SetTargetPath(x)
                         .SetSource(NugetApiUrl)
                         .SetApiKey(NugetApiKey)
                     );
                 });
-        });*/
+        });
 }
