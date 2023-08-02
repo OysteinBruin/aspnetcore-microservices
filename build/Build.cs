@@ -58,8 +58,8 @@ class Build : NukeBuild
                 .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()
-                .SetDescription("Sample package produced by NUKE")
-                .SetPackageTags("nuke demonstration c# library")
+                .SetDescription("Common configuration and implementations for my .Net microservices projects")
+                .SetPackageTags("microservice .net asp-net c# library")
                 .SetNoDependencies(true)
                 .SetOutputDirectory(ArtifactsDirectory / "nuget"));
 

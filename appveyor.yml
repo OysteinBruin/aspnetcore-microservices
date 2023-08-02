@@ -19,8 +19,8 @@ build_script:
 
 test: off
 
-deploy_script:
-  - ps: ./build.ps1 Pack
+#deploy_script:
+#  - ps: ./build.ps1 Pack
   #- ps: ./build.ps1 Push --NugetApiUrl "https://www.myget.org/F/oysteinbruin-myget/api/v2" --NugetApiKey $env:MyGetApiKey
   #- ps: |
   #    if ($env:APPVEYOR_REPO_TAG  -eq "true"){
