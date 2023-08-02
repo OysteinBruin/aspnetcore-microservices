@@ -13,8 +13,7 @@ pull_requests:
 branches:
   only:
     - main
-init:
-  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+
 build_script:
   - ps: ./build.ps1
 
